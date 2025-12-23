@@ -1,0 +1,28 @@
+Réponses TP2
+Exercice 1: 
+Si on exécute le code à nouveau, il y a aura 2 erreurs de duplication : une security-group qui a déjà été créé à l'exécution précédente, et une autre sur la règle d'authorisation à certains utilisateurs
+
+
+Exercice 2 :
+Il faut modifier la section "Launch the EC2 instance" et ajouter l'option --count avec le nombre d'instances que l'on souhaite créer.
+
+
+Exercice 3 :
+Si on relance, rien ne change, car l'état désiré est déjà atteint
+
+
+Exercice 4 :
+Il faut modifier le paramètre count dans le module amazon.aws.ec2_instance pour déployer plusieurs EC2.
+L’inventaire détecte automatiquement toutes les instances via leurs tags, et le playbook s’exécute alors sur toutes les instances sans modification
+
+
+Exercice 5 :
+Si on relance le packer build, une nouvelle AMI est générée
+
+
+Exercice 7 :
+Si on fait tofu apply après la destruction des ressources, cela va recréer tous les éléments
+
+
+Exercice 8:
+On utilise l'attribut count en indiquant le nombre d'instance que l'on souhaite créer
