@@ -1,0 +1,16 @@
+- name: Add Node.js packages to yum
+shell: curl -fsSL https://rpm.nodesource.com/setup_21.x | bash -
+- name: Install Node.js
+yum:
+name: nodejs
+- name: Create app user
+user:
+name: app-user
+- name: Install PM2
+npm:
+name: pm2
+global: true
+- name: Configure PM2 to run at startup as the app user
+shell: |
+su - app-user -c "pm2 startup systemd -u app-user --hp /home/app-user"
+systemctl enable pm2-app-user
