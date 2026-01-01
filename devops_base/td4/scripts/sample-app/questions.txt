@@ -1,0 +1,10 @@
+Exercice 5
+Avoir un bon versionning est important pour maintenir l'application, et éviter les bugs liés aux mises à jour
+
+Exercice 8:
+Pour ajouter une devDependencies, il faut faire la commande :
+npm install eslint --save-dev
+Les devDependencies servent en développement, et les dependencies lors de la production
+
+Exercice 10:
+La couverture de code est extrêmement importante pour s'assurer de tester tous les morceaux de code, et vérifier que chaque ligne a bien le comportement attendu selon des paramètres donnés
