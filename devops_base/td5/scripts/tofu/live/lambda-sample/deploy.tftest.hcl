@@ -30,3 +30,8 @@ condition = jsondecode(data.http.test_endpoint.response_body).message == "Hello,
 error_message = "Unexpected response body: ${data.http.test_endpoint.response_body}"
 }
 }
+assert {
+condition = data.http.test_endpoint.response_body == "Fundamentals of
+DevOps!"
+error_message = "Unexpected body: ${data.http.test_endpoint.response_body}"
+}
