@@ -1,0 +1,23 @@
+{
+  "name": "sample-app-backend",
+  "version": "0.0.1",
+  "main": "app.js",
+  "scripts": {
+    "test": "jest --verbose",
+    "coverage": "jest --coverage",
+    "start": "node server.js",
+    "dockerize": "./build-docker-image.sh",
+    "docker:run": "docker build -t my-app . && docker run -p 8080:8080 my-app"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "Backend app for 'DevOps Labs!'",
+  "dependencies": {
+    "express": "^5.2.1"
+  },
+  "devDependencies": {
+    "jest": "^29.7.0",
+    "supertest": "^7.1.4"
+  }
+}
